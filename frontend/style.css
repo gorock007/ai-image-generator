@@ -90,11 +90,14 @@ form button:hover{
 .image-container{
     width: 100%;
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .img{
     display: block;
     margin: auto;
+    
 }
 
 .text{

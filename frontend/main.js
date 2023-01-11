@@ -1,6 +1,11 @@
 
 const onSubmit = (e) =>{
     e.preventDefault();
+
+    //AFter submit
+    document.querySelector('.text').textContent='';
+    document.querySelector('#image').src = '';
+
     const prompt = document.querySelector('#prompt').value;
     const size = document.querySelector('#size').value;
     if(prompt === ''){
@@ -32,6 +37,8 @@ const generateImageRequest = async (prompt, size) =>{
 
         const data = await response.json();
 
+        const imageUrl = data.data;
+        document.querySelector('#image').src = imageUrl;
         removeSpinner()
     }catch(e){
         document.querySelector('.text').textContent = error;
