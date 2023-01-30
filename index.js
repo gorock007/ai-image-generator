@@ -14,4 +14,4 @@ app.use(express.static(path.join(__dirname, 'frontend')))
 
 app.use('/openai', require('./routes/openaiRoutes'))
 
-app.listen(port, () => console.log(`Running on port ${port}` ));
+app.listen(port, () => console.log(`Running on port ${port}` || 3000 ));
