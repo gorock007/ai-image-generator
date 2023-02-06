@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('/Users/goroc/ai-image-generator/node_modules/express');
 const dotenv = require('dotenv').config();
 const path = require('path');
 
