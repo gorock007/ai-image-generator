@@ -1,4 +1,6 @@
 [build]
-  command = "npm run build"
   functions = "functions"
-  publish = "public"
+
+[build.environment]
+  OPENAI_API_KEY = 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
+
