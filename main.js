@@ -19,15 +19,15 @@ const generateImageRequest = async (prompt, size) =>{
     try{
         showSpinner();
 
-        const response = await fetch('/openai/generateimage', {
+        const response = await fetch('/.netlify/functions/generateImage', {
             method: 'POST',
-            headers:{
-                'Content-Type': 'application/json'
+            headers: {
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 prompt,
-                size
-            })
+                size,
+            }),
         });
         if(!response.ok){
             removeSpinner();
@@ -40,7 +40,7 @@ const generateImageRequest = async (prompt, size) =>{
         document.querySelector('#image').src = imageUrl;
         removeSpinner()
     }catch(e){
-        document.querySelector('.text').textContent = error;
+        document.querySelector('.text').textContent = e.message;
     }
 }
 
