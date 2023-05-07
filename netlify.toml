@@ -2,5 +2,5 @@
   functions = "functions"
 
 [build.environment]
-  OPENAI_API_KEY = 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
+  OPENAI_API_KEY = "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"
 
