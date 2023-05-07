@@ -1,7 +1,6 @@
 
 const onSubmit = (e) =>{
     e.preventDefault();
-
     //AFter submit
     document.querySelector('.text').textContent='';
     document.querySelector('#image').src = '';

@@ -1,16 +1,14 @@
-const express = require('/Users/goroc/ai-image-generator/node_modules/express');
-const dotenv = require('dotenv').config();
+const express = require('express');
 const path = require('path');
-
-const port = process.env.PORT;
 const app = express();
-
+const port = process.env.PORT || 3000;
+require('dotenv').config();
 //Body parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-//Static folder
-app.use(express.static(path.join(__dirname, 'frontend')))
+//Static file
+app.use(express.static(path.join(__dirname)))
 
 app.use('/openai', require('./routes/openaiRoutes'))
 

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Image Generator</title>
     <link rel="stylesheet" href="spinner.css">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,16 +28,16 @@
             <form id="form">
                 <h1>Describe an Image prompt</h1>
                 <div class="form-control">
-                    <input type="text" id="prompt" placeholder="Enter Prompt">
+                    <input type="text" id="prompt" placeholder="Enter a description for the image" required>
                 </div>
                 <div class="form-control">
                     <select id="size" name="size">
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
+                        <option value="256x256">Small</option>
+                        <option value="512x512">Medium</option>
+                        <option value="1024x1024">Large</option>
                     </select>
                 </div>
-                <button type="submit" class="btn">Generate</button>
+                <button type="submit" class="btn">Generate Image</button>
             </form>
         </section>
         <!-- Image section -->
@@ -48,7 +48,7 @@
             </div>
         </section>
     </main>
-
+    <script src="main.js" defer></script>
     <div class="spinner"></div>
 
 </body>
