@@ -17,7 +17,7 @@ body{
 
 /* NAvbar */
 .navbar{
-    background: #333;
+    background: #000000;
     color: #fff;
     padding: 1rem;
     display: flex;
@@ -37,14 +37,17 @@ body{
     font-size: 1.2rem;
 }
 .navbar a:hover {
-    color: green;
+    color: #00B140;
 }
 
 /* display */
 .form-container {
     height: 500px;
     width: 100%;
-    background: #ccc;
+    /* background: #ccc; */
+    background: linear-gradient(135deg, #83a4d4, #b6fbff);
+    display: flex;
+    align-items: center;
 }
 .form-container h1{
     font-size: 2.5rem;
@@ -58,11 +61,15 @@ body{
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 80%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
 }
 .form-container form input, form select {
     font-size: 20px;
-    width: 500px;
+    width: 100%;
     max-width: 500px;
     padding: 1rem;
     border: 1px solid #ccc;
@@ -97,6 +104,8 @@ form button:hover{
 .img{
     display: block;
     margin: auto;
+    max-width: 100%;
+    width: 100%;
     
 }
 
@@ -146,6 +155,11 @@ form button:hover{
         margin-bottom: 0.5rem;
     }
 
+    .text {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 480px) {
     .text {
         font-size: 1.2rem;
     }
