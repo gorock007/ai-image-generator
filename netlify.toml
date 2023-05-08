@@ -1,6 +1,2 @@
 [build]
   functions = "functions"
-
-[build.environment]
-  OPENAI_API_KEY = "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"
-
