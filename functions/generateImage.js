@@ -35,10 +35,10 @@ exports.handler = async (event, context) => {
         };
     } catch (e) {
         if (e.response) {
-            console.log(e.response.status);
-            console.log(e.response.data);
+            console.error("Error status:", e.response.status);
+            console.error("Error data:", e.response.data)
         } else {
-            console.log(e.message);
+            console.error("Error message:", e.message);
         }
         return {
             statusCode: 500,
