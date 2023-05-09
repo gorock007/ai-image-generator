@@ -50,4 +50,12 @@ const showSpinner = () =>{
 const removeSpinner = () =>{
     document.querySelector('.spinner').classList.remove('show');
 }
+const addLogoClickListener = () =>{
+    document.querySelector('#logo-reload').addEventListener('click', function(){
+        location.reload();
+    });
+};
+//event listener for the logo
+addLogoClickListener();
+//event listener for the form
 document.querySelector('#form').addEventListener('submit', onSubmit);
