@@ -15,7 +15,8 @@ exports.handler = async (event, context) => {
     const sizes = {
         small: '256x256',
         medium: '512x512',
-        default: '1024x1024',
+        large: '1024x1024',
+        default: '256x256',
     };
     const imageSize = sizes[size] || sizes.default;
     try {
