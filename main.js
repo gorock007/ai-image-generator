@@ -5,7 +5,7 @@ const onSubmit = (e) =>{
     document.querySelector('.text').textContent='';
     document.querySelector('#image').src = '';
 
-    const prompt = document.querySelector('#prompt').value;
+    const prompt = document.querySelector('#prompt').innerText;
     const size = document.querySelector('#size').value;
     if(prompt === ''){
         alert('Please enter some prompt');

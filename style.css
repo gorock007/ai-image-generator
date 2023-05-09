@@ -66,7 +66,7 @@ body{
     border-radius: 8px;
     padding: 2rem;
 }
-.form-container form textarea, form select {
+.form-container form div[contenteditable], form select {
     font-size: 20px;
     width: 100%;
     max-width: 500px;
@@ -76,9 +76,9 @@ body{
     margin-bottom: 1rem;
 }
 
-textarea{
-    resize: none;
-    overflow: hidden;
+form div[contenteditable]:focus{
+    outline: none;
+    border: 1px solid #333;
 }
 
 form button {
