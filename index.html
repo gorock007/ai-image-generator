@@ -28,7 +28,8 @@
             <form id="form">
                 <h1>Describe an Image prompt</h1>
                 <div class="form-control">
-                    <input type="text" id="prompt" placeholder="Enter a description for the image" required>
+                    <textarea id="prompt" rows="1" placeholder="Enter a description for the image" required
+                        oninput="adjustHeight(this)"></textarea>
                 </div>
                 <div class="form-control">
                     <select id="size" name="size">
@@ -48,6 +49,12 @@
             </div>
         </section>
     </main>
+    <script>
+        function adjustHeight(textarea){
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+    </script>
     <script src="main.js" defer></script>
     <div class="spinner"></div>
 
