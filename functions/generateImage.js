@@ -13,12 +13,11 @@ exports.handler = async (event, context) => {
     const { prompt, size } = JSON.parse(event.body);
     // Image Sizes
     const sizes = {
-        small: '256x256',
-        medium: '512x512',
-        large: '1024x1024',
-        default: '256x256',
+        '256x256': '256x256',
+        '512x512': '512x512',
+        '1024x1024': '1024x1024',
     };
-    const imageSize = sizes[size] || sizes.default;
+    const imageSize = sizes[size] || sizes['512x512'];
     try {
         const response = await openai.createImage({
             prompt,
